@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class MailServiceImpl implements MailService {
 
+	// Refercense : https://docs.spring.io/spring/docs/current/spring-framework-reference/integration.html#mail
+
 	@Autowired
 	private MailSender sender;
 
