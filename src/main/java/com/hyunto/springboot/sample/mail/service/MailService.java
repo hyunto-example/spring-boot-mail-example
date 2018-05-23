@@ -5,6 +5,10 @@ import org.springframework.mail.MailException;
 
 public interface MailService {
 
-	public void sendMail(Mail mail) throws MailException;
+	public void sendSimpleMail(Mail mail) throws MailException;
+
+	public void sendJavaMimeMail(Mail mail) throws MailException;
+
+	public void sendJavaMimeHelperMail(Mail mail) throws MailException;
 
 }

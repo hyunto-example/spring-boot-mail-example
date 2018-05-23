@@ -17,11 +17,17 @@ public class MailController {
 
 	@PostMapping("/simple")
 	public void sendSimpleMail(@RequestBody Mail mail) {
-		mailService.sendMail(mail);
+		mailService.sendSimpleMail(mail);
 	}
 
-	@PostMapping("/mime")
-	public void sendMimeMail() {
-
+	@PostMapping("/javamime")
+	public void sendJavaMimeMail(@RequestBody Mail mail) {
+		mailService.sendJavaMimeMail(mail);
 	}
+
+	@PostMapping("/javamimehelper")
+	public void sendJavaMimeHelperMail(@RequestBody Mail mail) {
+		mailService.sendJavaMimeHelperMail(mail);
+	}
+
 }
